@@ -1,0 +1,36 @@
+title Create Album
+
+p.white-text Create Album
+
+style.
+    p {
+        font-size: 10vh;
+        margin-bottom: 1vh;
+    }
+
+    label {
+        font-size: 5vh;
+        width: 20%;
+        display: inline-block;
+        height: auto;
+    }
+
+    input {
+        padding: 0;
+        font-size: 5vh;
+    }
+
+link(rel='stylesheet' href='http://localhost:3000/public.css')
+
+form(class='white-text' method='POST' action='/api/create/album' enctype='multipart/form-data')
+    label(for='album_title') Album Title:
+    input(type='text' name='album_title')
+    br
+    label(for='artist') Artist:
+    input(type='text' name='artist')
+    br
+    label(for='album_art' name='album_art') Album Art:
+    input(type='file' name='album_art')
+    br
+    input(type='submit' value='Submit Album')
+</form>

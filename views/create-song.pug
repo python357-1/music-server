@@ -1,0 +1,39 @@
+title Create Song
+
+style.
+    p {
+        font-size: 10vh;
+        margin-bottom: 1vh;
+    }
+
+    label {
+        font-size: 5vh;
+        width: 20%;
+        display: inline-block;
+        height: auto;
+    }
+
+    input {
+        padding: 0;
+        font-size: 5vh;
+    }
+    
+
+link(rel='stylesheet' href='http://localhost:3000/public.css')
+
+p(class='white-text') Create Song
+
+form.white-text(method='POST', action='/api/create/song', enctype='multipart/form-data')
+    label(for='song_title') Song Title:
+    input(type='text' name='song_title')
+    br
+    label(for='album_title') Album Title:
+    input(type='text' name='album_title')
+    br
+    label(for='artist_name') Artist Name: 
+    input(type='text' name='artist_name')
+    br
+    label(for='song_source' name='song_source') Source File: 
+    input(type='file' name='song_source')
+    br
+    input(type='submit', value='Submit')

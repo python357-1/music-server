@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+.white-text {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+html, body {
+    background-color: #223344;
+}
+
+* {
+    font-family: 'Staatliches', cursive;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.inline {
+    display: inline;
+}
+
+.header {
+    text-shadow: 10px 10px 12px #000;
+}

@@ -1,0 +1,29 @@
+style.
+    p {
+        font-size: 10vh;
+        margin-bottom: 1vh;
+    }
+
+    label {
+        font-size: 5vh;
+        width: 20%;
+        display: inline-block;
+        height: auto;
+    }
+
+    input, select {
+        padding: 0;
+        font-size: 4vh;
+    }
+    
+
+link(rel='stylesheet', href='http://localhost:3000/public.css')
+
+form(action='/app/view/artist', enctype='application/x-www-form-urlencoded', method='post', class='white-text')
+    label(for='artist') Choose an artist
+    br
+    select(name='artist' id='artist')
+        each artist in artists
+            option(value=artist)= artist.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+    br
+    input(type='submit', value='Continue')

@@ -1,0 +1,32 @@
+link(rel='stylesheet', href='http://localhost:3000/public.css')
+
+h1.text-center.white-text Login
+
+style.
+    p {
+        font-size: 10vh;
+        margin-bottom: 1vh;
+    }
+    label {
+        font-size: 5vh;
+        width: 20%;
+        display: inline-block;
+        height: auto;
+    }
+    input {
+        padding: 0;
+        font-size: 5vh;
+    }
+    h1 {
+        margin: 10px;
+        font-size: 100px;
+    }
+
+form.text-center(method='post', action='/api/user/login', enctype='application/x-www-form-urlencoded')
+    label.white-text(for='user') Username:
+    input(type='text', name='user', id='user', required)
+    br
+    label.white-text(for='pass') Password:
+    input(type='password', name='pass', id='pass', required)
+    br
+    input(type='submit', value='Submit')
